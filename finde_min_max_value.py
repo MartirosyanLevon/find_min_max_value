@@ -1,3 +1,6 @@
+from random import randint
+
+
 def min_max(a):
     min = a[0]
     max = a[0]
@@ -6,24 +9,18 @@ def min_max(a):
             min = i
         elif i > max:
             max = i
-    return min,max            
-
-from random import randint
-
-
+    return min, max
 
 
 b = []
 n = int(input('Enter size of list: '))
 for i in range(n):
-    b.append(randint(0,100))
+    b.append(randint(0, 100))
 print(b)
-
-
 
 c = min_max(b)
 for i in range(len(c)):
     if i == 0:
-        print('min value of list =',c[i])
+        print('min value of list =', c[i])
     else:
-        print('max value of list =',c[i])
+        print('max value of list =', c[i])
